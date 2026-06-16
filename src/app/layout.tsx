@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/Sidebar'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: 'Orbis — International Office CRM',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="main-content">
           {children}
         </main>
+        <Toaster position="bottom-right" richColors />
       </body>
     </html>
   )
